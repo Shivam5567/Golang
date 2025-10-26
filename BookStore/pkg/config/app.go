@@ -13,12 +13,12 @@ dsn := "shivam:1234@tcp(localhost:3306)/simplerest?charset=utf8mb4&parseTime=Tru
 
     d, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
     if err != nil {
-        fmt.Println("❌ Failed to connect to the database:", err)
+        fmt.Println("Failed to connect to the database:", err)
         panic(err)
     }
 
     db = d
-    fmt.Println("✅ Database connection established successfully.")
+    fmt.Println("Database connection established successfully.")
 }
 
 func GetDB() *gorm.DB {
